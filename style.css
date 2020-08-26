@@ -95,12 +95,12 @@ article p{
 }
 
 #skill{
-	position: relative;
-	left:-800px;
+	clear: both;
+	float: left;
 }
 
 .last{
-	position: absolute;
+	position: static;
 	margin-top:900px;
 	background-color: rgb(51, 49, 49);
 	margin-bottom: 10px;
