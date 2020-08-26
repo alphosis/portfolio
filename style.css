@@ -1,0 +1,119 @@
+body {
+	background-color:black;
+	color: #555555;
+	font: 17px Arial, Helvetica, sans-serif;
+	line-height: 1.5em;
+	margin: 0;
+}
+.container {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+h1{
+	color:grey;
+}
+#main-header {
+	background-color: rgba(0, 0, 0, 0.932);
+	color: #fff
+}
+#links {
+	background-color:rgba(0, 0, 0, 0.932);
+}
+#links a {
+	color: #808080;
+	padding-right: 17px;
+	text-decoration:none;
+	clear:both;
+	display: inline;
+
+}
+#links li {
+	display: inline;
+
+}
+
+
+#main-footer {
+	text-align: center;
+	padding: 15px;
+	margin-top: 50px;
+}
+
+main{
+	background-color:black;
+	min-height: 150px;
+	margin-top:20px;
+	margin-bottom: 80px;;
+}
+main p{
+	color:white;
+	font-family: 'Oswald', sans-serif;
+	font-size:32px;
+	margin: 20px 60px;
+}
+.color{
+	color:rgb(221, 33, 64);
+}
+
+.mybutton{
+    background-color: white;
+    color: black;  
+    font-family: 'Oswald', sans-serif;
+    padding: 11px 25px;
+	border-radius: 5px;
+	margin-left: 60px;
+}
+
+.mybutton:hover{
+	background-color: green;
+	color:white;
+    transition-duration: 1s;
+}
+
+#work h1{
+	color:White;
+}
+#work{
+	margin:20px 20px;
+	padding-left:200px;
+	
+}
+section h3{
+	font-size:100px;
+}
+article{
+	left: -600px;
+	float:right;
+}
+
+article h3{
+	font-size:100px;
+}
+article p{
+	font-size:25px;
+}
+
+#skill{
+	position: relative;
+	left:-800px;
+}
+
+.last{
+	position: absolute;
+	margin-top:900px;
+	background-color: rgb(51, 49, 49);
+	margin-bottom: 10px;
+	padding: 20px 500px;
+	text-align:center;
+	color: white;
+	margin-left: 170px;
+}
+.checked {
+    color: orange;
+  }
+
+
+
+
+
