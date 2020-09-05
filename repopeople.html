@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <style>
+        
+        .user{
+            width: 50%;
+            background-color: rgb(245, 239, 239);
+            margin-bottom: 25px;  
+            padding:10px;
+        } 
+        ul{
+           float: right; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Github Users</h1>
+    <div id="users"></div>
+    <button id="button">Load Github Users</button>
+    <script>
+        document.getElementById('button').addEventListener('click', showData);
+        function showData() {
+            var req = new XMLHttpRequest();
+            req.open('GET', 'https://api.github.com/users', true);
+            req.onload = function(){
+                if(req.status==200){
+                    var people = JSON.parse(req.responseText)
+                    var output= '';
+                    for(var i in people){
+                        output +=
+                        '<div class="user">' +
+                        '<img src="'+people[i].avatar_url+'"width="200" height="200">'+
+                        '<ul>' +
+                        '<li>ID: '+people[i].id+'</li>' +
+                        '<li>Login: '+people[i].login+'</li>' +
+                        '<li style="border: 1px solid black;background-color:green;color:white;">Repos:'+people[i].url +'</li>'+
+                        '<li>Followers URL: '+people[i].followers_url +'</li>'+
+                        '<li>Followering URL: '+people[i].following_url +'</li>'+
+                        '<li>Gists URL: '+people[i].gists_url +'</li>'+
+                        '<li>Starred URL: '+people[i].starred_url +'</li>'+
+                        '</ul>' +
+                        '</div>';
+                        }
+                        document.getElementById('users').innerHTML=output;
+                    }
+                 }
+            req.send();
+        }
+    </script>
+</body>
+</html>
